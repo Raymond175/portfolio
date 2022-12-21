@@ -1,7 +1,12 @@
-import '../styles/globals.css'
+import { NextUIProvider } from '@nextui-org/react';
+import { theme } from '../theme';
 
 function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
+  return (
+    <NextUIProvider theme={theme}>
+      <Component {...pageProps} />
+    </NextUIProvider>
+  );
 }
 
-export default MyApp
+export default MyApp;
